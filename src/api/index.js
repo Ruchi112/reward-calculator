@@ -1,0 +1,27 @@
+// api.js
+export const fetchCustomerData = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        {
+          id: 1,
+          name: 'John Doe',
+          transactions: [
+            { date: '2024-06-15', amount: 120 },
+            { date: '2024-07-03', amount: 75 },
+            { date: '2024-08-20', amount: 180 },
+          ],
+        },
+        {
+          id: 2,
+          name: 'Jane Smith',
+          transactions: [
+            { date: '2024-06-10', amount: 60 },
+            { date: '2024-07-15', amount: 110 },
+            { date: '2024-08-01', amount: 95 },
+          ],
+        },
+      ]);
+    }, 1000);
+  });
+};
