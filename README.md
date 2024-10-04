@@ -30,7 +30,7 @@ This project is a simple React application that tracks customer transactions and
     
     ```bash
     
-    git clone https://github.com/yourusername/customer-rewards-program.git cd customer-rewards-program
+    git clone https://github.com/yourusername/customer-rewards-program.git && cd customer-rewards-program
     
 2.  Install dependencies:
     

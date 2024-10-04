@@ -10,4 +10,21 @@ export const calculatePoints = (amount) => {
 
   return points;
 };
-  
+
+export const getMonthlyPoints = (transactions) => {
+  const monthlyPoints = {};
+
+  transactions.forEach((transaction) => {
+    const month = new Date(transaction.date).toLocaleString('default', { month: 'long' });
+    const flooredAmount = Math.floor(transaction.amount);
+    const points = calculatePoints(flooredAmount);
+
+    if (!monthlyPoints[month]) {
+      monthlyPoints[month] = 0;
+    }
+    monthlyPoints[month] += points;
+  });
+
+  return monthlyPoints;
+};
+

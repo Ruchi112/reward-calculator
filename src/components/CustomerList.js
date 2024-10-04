@@ -4,7 +4,7 @@ import { calculatePoints } from '../util/rewardPoints';
 
 const CustomerList = ({ customers }) => {
   return (
-    <div className="customer-list">
+    <div className="customer-list" data-testid="customer-list">
       {customers.map((customer) => {
         const totalPoints = customer.transactions.reduce(
           (total, transaction) => total + calculatePoints(transaction.amount),

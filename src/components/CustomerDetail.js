@@ -1,21 +1,5 @@
 import React from 'react';
-import { calculatePoints } from '../util/rewardPoints';
-
-const getMonthlyPoints = (transactions) => {
-  const monthlyPoints = {};
-
-  transactions.forEach((transaction) => {
-    const month = new Date(transaction.date).getMonth() + 1;
-    const points = calculatePoints(transaction.amount);
-
-    if (!monthlyPoints[month]) {
-      monthlyPoints[month] = 0;
-    }
-    monthlyPoints[month] += points;
-  });
-
-  return monthlyPoints;
-};
+import { calculatePoints, getMonthlyPoints } from '../util/rewardPoints';
 
 const CustomerDetail = ({ customer }) => {
   const monthlyPoints = getMonthlyPoints(customer.transactions);
@@ -26,7 +10,7 @@ const CustomerDetail = ({ customer }) => {
       <ul>
         {Object.entries(monthlyPoints).map(([month, points]) => (
           <li key={month}>
-            Month {month}: {points} points
+            {month}: {points} points
           </li>
         ))}
       </ul>
