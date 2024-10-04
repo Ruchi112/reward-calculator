@@ -59,3 +59,11 @@ This project is a simple React application that tracks customer transactions and
 To run the tests, use the following command:
 
     npm test
+
+
+## Screenshots
+
+<img width="1059" alt="image" src="https://github.com/user-attachments/assets/67a4e601-2a3a-4a46-a1ed-adaa172fd84a">
+<img width="586" alt="image" src="https://github.com/user-attachments/assets/ae349203-bea0-4728-b1b2-4263b8c73354">
+
+
